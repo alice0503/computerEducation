@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>교과교육지능형 교육 웹사이트</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>교과교육지능형 교육 웹사이트</h1>
+    <nav>
+        <ul>
+            <li><a href="#">홈</a></li>
+            <li><a href="#">강좌</a></li>
+            <li><a href="#">자료실</a></li>
+            <li><a href="#">문의하기</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <h2>인기 강좌</h2>
+        <ul>
+            <li>
+                <h3>국어</h3>
+                <p>한글 문법과 작문 연습을 통해 국어 능력을 향상시키세요.</p>
+                <a href="https://www.ebsi.co.kr/ebs/lms/lmsx/retrieveSbjtDtl.ebs?courseId=S20220000808#intro">강좌 보기</a>
+            </li>
+            <li>
+                <h3>수학</h3>
+                <p>기초 수학부터 고급 미적분까지 다양한 수학 강의를 제공합니다.</p>
+                <a href="https://www.ebsi.co.kr/ebs/lms/lmsx/retrieveSbjtDtl.ebs?courseId=S20220000826#intro">강좌 보기</a>
+            </li>
+            <li>
+                <h3>과학</h3>
+                <p>실험 동영상과 이론 강의로 재미있게 과학을 배워보세요.</p>
+                <a href="https://www.ebsi.co.kr/ebs/lms/lmsx/retrieveSbjtDtl.ebs?courseId=S20240000076#intro">강좌 보기</a>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>최신 자료</h2>
+        <ul>
+            <li>
+                <h3>국어 문법 강의 자료</h3>
+                <p>문법 규칙과 예제 문장으로 구성된 강의 자료입니다.</p>
+                <a href="#">다운로드</a>
+            </li>
+            <li>
+                <h3>수학 문제집</h3>
+                <p>다양한 난이도의 수학 문제가 포함된 연습 문제집입니다.</p>
+                <a href="#">다운로드</a>
+            </li>
+            <li>
+                <h3>과학 실험 동영상</h3>
+                <p>다양한 과학 실험과 관련된 동영상 자료입니다.</p>
+                <a href="https://www.youtube.com/playlist?list=PLwmIkU243eCpP3kiQyUcX4JDq0H24VJWw">시청하기</a>
+            </li>
+        </ul>
+    </section>
+
+    <section id="courses">
+        <h2>강좌</h2>
+        <p>다양한 교육 강좌를 찾아보세요.</p>
+        <a href="https://www.google.com" target="_blank">강좌 보기</a>
+    </section>
+
+    <section id="materials">
+        <h2>자료실</h2>
+        <p>다양한 교육 자료를 찾아보세요.</p>
+        <a href="https://www.naver.com" target="_blank">자료실 보기</a>
+    </section>
+
+    <section id="contact">
+        <h2>문의하기</h2>
+        <p>문의사항이나 궁금한 사항이 있으시면 연락주세요.</p>
+        <a href="https://www.daum.net" target="_blank">문의하기</a>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 교과교육지능형 교육. All rights reserved.</p>
+</footer>
+<script>
+    document.querySelector('nav ul li:nth-child(2) a').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.getElementById('courses').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    document.querySelector('nav ul li:nth-child(3) a').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.getElementById('materials').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    document.querySelector('nav ul li:nth-child(4) a').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    });
+</script>
+</body>
+</html>
