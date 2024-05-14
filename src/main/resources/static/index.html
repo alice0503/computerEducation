@@ -3,37 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>교과교육지능형 교육 웹사이트</title>
+    <title>AAAI; All About AI</title>
     <style>
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f8f8f8;
+            min-height: 100%;
+            width: 100%;
+            position: relative;
         }
 
+        button:hover{
+            cursor: pointer;
+        }
+        /* 헤더 */
         header {
-            background-color: #333;
+            background-color: whitesmoke;
             color: #fff;
             padding: 20px;
             text-align: center;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            z-index: 999;
         }
 
         h1 {
+
+            position: absolute;
+            margin: 0; /* 추가 */
+            color: black;
+        }
+        h1 img{
+            height: 50px;
+            width: auto;
+        }
+        nav {
             margin: 0;
-            font-size: 36px;
+            width: 100%;
+            background: lightslategrey;
         }
 
         nav ul {
             list-style-type: none;
             margin: 0;
-            padding: 0;
+            padding: 2%;
             text-align: center;
+            display: flex; /* Flexbox 설정 */
+            justify-content: center; /* 가운데 정렬 */
         }
 
         nav ul li {
-            display: inline;
-            margin-right: 20px;
+            color: lightslategrey;
+
+            position: relative; /* 드롭다운을 위해 position 추가 */
+            flex-grow: 1; /* 동일한 공간을 차지하도록 설정 */
+        }
+
+        nav ul li:last-child {
+            margin-right: 0; /* 마지막 요소는 오른쪽 마진을 없앰 */
         }
 
         nav ul li a {
@@ -43,11 +75,47 @@
         }
 
         nav ul li a:hover {
-            text-decoration: underline;
+            text-decoration: none;
         }
 
+        /* 드롭다운 메뉴 */
+        .dropdown-content {
+            position: absolute;
+            top: 10px;
+            background-color: snow;
+            min-width: 160px;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            z-index: 1;
+            overflow: hidden; /* 슬라이드 효과를 위해 overflow 속성 추가 */
+            max-height: 0; /* 초기 높이를 0으로 설정하여 숨김 */
+            transition: max-height 0.5s ease; /* 높이에 대한 애니메이션 설정 */
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        /* 드롭다운 메뉴 활성화 */
+        .dropdown:hover .dropdown-content {
+            max-height: 200px; /* 호버 시 높이를 펼쳐서 나타내도록 설정 */
+        }
+
+        /* 메인 */
         main {
-            padding: 20px;
+            padding: 0;
+             /* 헤더의 높이만큼 여백 추가 */
+        }
+        main img {
+            width: 100%;
+            height: auto;
         }
 
         section {
@@ -68,109 +136,67 @@
         }
 
         footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            /*background-color: #333;*/
+            /*color: #fff;*/
+            /*text-align: center;*/
+            /*padding: 10px 0;*/
+            /*position: fixed;*/
+            /*bottom: 0;*/
+            /*width: 100%;*/
         }
     </style>
 </head>
 <body>
 <header>
-    <h1>교과교육지능형 교육 웹사이트</h1>
-    <nav>
-        <ul>
-            <li><a href="#">홈</a></li>
-            <li><a href="#">강좌</a></li>
-            <li><a href="#">자료실</a></li>
-            <li><a href="#">문의하기</a></li>
-        </ul>
-    </nav>
+    <h1><a href="#"><img src="logo.png" alt="사이트 로고"></a></h1>
 </header>
-
+<nav>
+    <ul>
+        <li class="dropdown">
+            <a href="/ai">4차 산업 혁명과 AI</a>
+            <div class="dropdown-content">
+                <a href="/ai/tech">4차 산업 시대의 기술들</a>
+                <a href="/ai/expression">AI란?</a>
+                <a href="/ai/quiz">QUIZ</a>
+            </div>
+        </li>
+        <a> | </a>
+        <li class="dropdown">
+            <a href="/bigdata">빅데이터</a>
+            <div class="dropdown-content">
+                <a href="/bigdata/expression">빅데이터란?</a>
+                <a href="/bigdata/correlation">AI와 빅데이터의 상관관계</a>
+                <a href="/bigdata/quiz">QUIZ</a>
+            </div>
+        </li>
+        <a> | </a>
+        <li class="dropdown">
+            <a href="/programming-lang">프로그래밍 언어</a>
+            <div class="dropdown-content">
+                <a href="/programming-lang/expression">프로그래밍 언어란?</a>
+                <a href="/programming-lang/example">여러 가지 언어 알아보기</a>
+            </div>
+        </li>
+        <a> | </a>
+        <li class="dropdown">
+            <a href="/python">Python을 이용한 데이터 분석</a>
+            <div class="dropdown-content">
+                <a href="/python/simulation">Python 실습하기</a>
+                <a href="/python/data-summary">데이터 요약하기</a>
+                <a href="/python/data-visualization">데이터 시각화하기</a>
+            </div>
+        </li>
+    </ul>
+</nav>
 <main>
+    <img src="background.jpg">
     <section>
-        <h2>인기 강좌</h2>
-        <ul>
-            <li>
-                <h3>국어</h3>
-                <p>한글 문법과 작문 연습을 통해 국어 능력을 향상시키세요.</p>
-                <a href="https://www.ebsi.co.kr/ebs/lms/lmsx/retrieveSbjtDtl.ebs?courseId=S20220000808#intro">강좌 보기</a>
-            </li>
-            <li>
-                <h3>수학</h3>
-                <p>기초 수학부터 고급 미적분까지 다양한 수학 강의를 제공합니다.</p>
-                <a href="https://www.ebsi.co.kr/ebs/lms/lmsx/retrieveSbjtDtl.ebs?courseId=S20220000826#intro">강좌 보기</a>
-            </li>
-            <li>
-                <h3>과학</h3>
-                <p>실험 동영상과 이론 강의로 재미있게 과학을 배워보세요.</p>
-                <a href="https://www.ebsi.co.kr/ebs/lms/lmsx/retrieveSbjtDtl.ebs?courseId=S20240000076#intro">강좌 보기</a>
-            </li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>최신 자료</h2>
-        <ul>
-            <li>
-                <h3>국어 문법 강의 자료</h3>
-                <p>문법 규칙과 예제 문장으로 구성된 강의 자료입니다.</p>
-                <a href="#">다운로드</a>
-            </li>
-            <li>
-                <h3>수학 문제집</h3>
-                <p>다양한 난이도의 수학 문제가 포함된 연습 문제집입니다.</p>
-                <a href="#">다운로드</a>
-            </li>
-            <li>
-                <h3>과학 실험 동영상</h3>
-                <p>다양한 과학 실험과 관련된 동영상 자료입니다.</p>
-                <a href="https://www.youtube.com/playlist?list=PLwmIkU243eCpP3kiQyUcX4JDq0H24VJWw">시청하기</a>
-            </li>
-        </ul>
-    </section>
-
-    <section id="courses">
-        <h2>강좌</h2>
-        <p>다양한 교육 강좌를 찾아보세요.</p>
-        <a href="https://www.google.com" target="_blank">강좌 보기</a>
-    </section>
-
-    <section id="materials">
-        <h2>자료실</h2>
-        <p>다양한 교육 자료를 찾아보세요.</p>
-        <a href="https://www.naver.com" target="_blank">자료실 보기</a>
-    </section>
-
-    <section id="contact">
-        <h2>문의하기</h2>
-        <p>문의사항이나 궁금한 사항이 있으시면 연락주세요.</p>
-        <a href="https://www.daum.net" target="_blank">문의하기</a>
     </section>
 </main>
 
 <footer>
-    <p>&copy; 2024 교과교육지능형 교육. All rights reserved.</p>
 </footer>
 <script>
-    document.querySelector('nav ul li:nth-child(2) a').addEventListener('click', function(event) {
-        event.preventDefault();
-        document.getElementById('courses').scrollIntoView({ behavior: 'smooth' });
-    });
-
-    document.querySelector('nav ul li:nth-child(3) a').addEventListener('click', function(event) {
-        event.preventDefault();
-        document.getElementById('materials').scrollIntoView({ behavior: 'smooth' });
-    });
-
-    document.querySelector('nav ul li:nth-child(4) a').addEventListener('click', function(event) {
-        event.preventDefault();
-        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-    });
 </script>
 </body>
 </html>
