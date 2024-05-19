@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1.0">
-    <title>AAAI; All About AI</title>
+    <title>AAAI-4차 산업 혁명과 AI</title>
     <style>
 
         body {
@@ -15,7 +15,6 @@
             width: 100vw;
             height: 100vh;
             position: relative;
-            overflow: hidden;
         }
 
         button:hover{
@@ -25,43 +24,42 @@
         header {
             background-color: whitesmoke;
             color: #fff;
-            padding: 0px;
+            padding: 20px;
             text-align: center;
             top: 0;
             left: 0;
             width: 100%;
-            height: 60px;
+            height: 30px;
             z-index: 999;
         }
 
         h1 {
+
             position: absolute;
             margin: 0; /* 추가 */
             color: snow;
         }
         h1 img{
-            height: 60px;
+            height: 50px;
             width: auto;
         }
         nav {
             margin: 0;
             width: 100%;
-            height: fit-content;
             background: lightslategrey;
         }
 
         nav ul {
             list-style-type: none;
             margin: 0;
-            height: inherit;
             padding: 2%;
             text-align: center;
             display: flex; /* Flexbox 설정 */
+            justify-content: center; /* 가운데 정렬 */
         }
 
         nav ul li {
             color: lightslategrey;
-            height: 100%;
 
             position: relative; /* 드롭다운을 위해 position 추가 */
             flex-grow: 1; /* 동일한 공간을 차지하도록 설정 */
@@ -84,11 +82,9 @@
         /* 드롭다운 메뉴 */
         .dropdown-content {
             position: absolute;
-            top: 50px;
-            left: 50%;
-            transform: translateX(-50%);
+            top: 10px;
             background-color: snow;
-            width: 100%;
+            min-width: 160px;
             box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
             z-index: 1;
             overflow: hidden; /* 슬라이드 효과를 위해 overflow 속성 추가 */
@@ -115,25 +111,21 @@
 
         /* 메인 */
         main {
-            height: 100%;
-            display: flex; /* 요소를 플렉스 컨테이너로 설정하여 내부 요소를 가운데 정렬하기 위해 */
-            justify-content: center; /* 수평 가운데 정렬 */
-            align-items: center; /* 수직 가운데 정렬 */
-            background-image: url('background.jpg'); /* 이미지 파일의 경로 지정 */
-            background-size: cover; /* 배경 이미지를 요소에 맞추기 위해 확대/축소 */
-            background-position: center; /* 배경 이미지를 가운데 정렬 */
-             /* 헤더의 높이만큼 여백 추가 */
 
         }
 
         main section {
-            color: #fff; /* 텍스트 색상을 흰색으로 설정 */
-            text-align: center; /* 텍스트를 가운데 정렬 */
-            font-size: x-large;
+
         }
 
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
 
-
+        li {
+            margin-bottom: 10px;
+        }
 
         footer {
             /*background-color: #333;*/
@@ -190,7 +182,7 @@
 </nav>
 <main>
     <section>
-        <div class = "intro"><h2>인공지능 학습 사이트 AAAI와 함께 4차 산업시대에 발맞춰 전진해보세요!</h2></div>
+
     </section>
 </main>
 
